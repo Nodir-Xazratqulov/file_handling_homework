@@ -7,4 +7,23 @@ def main(data:str):
         list: return answer
     """
     
+    f=open(data,mode='r')
+    a=f.read()
+    s=[]
+    d=[]
+    k=0
+    j=0
+    for i in a:
+        if i.isdigit():
+            k+=1
+        elif i.isalpha():
+            j+=1
+    s.append(k)
+    d.append(j)
+
+    
+    return s+d
+print(main('txt_file/data05.txt'))
+
+
 # Read data from file
