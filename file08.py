@@ -6,5 +6,13 @@ def main(data:str):
     Returns:
         int: return answer
     """
-
+    f=open(data, mode='r')
+    s=f.read()
+    son=[]
+    # k=0
+    for i in s:
+        if i.isdigit():
+            son.append(int(i))
+    return max(son)
+print(main('txt_file/data08.txt'))
 # Read data from file
